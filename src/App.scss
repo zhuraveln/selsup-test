@@ -8,6 +8,7 @@
     .logo {
       height: 100px;
       padding: 20px;
+      margin-top: 10px;
       will-change: filter;
       transition: filter 0.5s ease-in-out;
       animation: logo-scale infinite 30s linear;
