@@ -116,6 +116,8 @@ export const App: React.FC = () => {
     setDisplayModel(JSON.stringify(model, null, 4))
   }
 
+  React.useEffect(() => setDisplayModel(''), [model])
+
   return (
     <div className='root'>
       <div className='header'>
