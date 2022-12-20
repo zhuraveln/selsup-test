@@ -110,10 +110,10 @@ export const App: React.FC = () => {
   const params: Param[] = initialParams // Get params from initialParams
 
   const [model, setModel] = React.useState<Model>(initialModel)
+  const [displayModel, setDisplayModel] = React.useState<string>('')
 
   const getModel = () => {
-    alert('Model in console')
-    console.log('Model', model)
+    setDisplayModel(JSON.stringify(model, null, 4))
   }
 
   return (
@@ -130,6 +130,9 @@ export const App: React.FC = () => {
           <ParamEditor params={params} model={model} setModel={setModel} />
         </div>
         <button onClick={getModel}>Get Model</button>
+        <div className='display_model'>
+          <pre>{displayModel}</pre>
+        </div>
       </div>
     </div>
   )
